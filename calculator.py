@@ -12,11 +12,38 @@ while True:
 	user_input.strip()
 	user_input = user_input.split(" ")
 
+
 	if user_input[0] == "q":
 		print("You have exited the calculator.")
 		sys.exit()
 
-	elif user_input[0] == "+":
-		print(add(int(user_input[1]), int(user_input[2])))
+	else:
+		num1 = float(user_input[1]) 
 
+		if user_input[0] == "square":
+			print(square(num1))
+
+		elif user_input[0] == "cube":
+			print(cube(num1))
+			
+		else:
+			num2 = float(user_input[2])
+
+			if user_input[0] == "+":
+				print(add(num1, num2))
+ 
+			elif user_input[0] == "-":
+				print(subtract(num1, num2))
+
+			elif user_input[0] == "*":
+				print(multiply(num1, num2))
+
+			elif user_input[0] == "/":
+				print(divide(num1, num2))
+
+			elif user_input[0] == "pow":
+				print(power(num1, num2))
+
+			elif user_input[0] == "mod":
+				print(mod(num1, num2))
 
